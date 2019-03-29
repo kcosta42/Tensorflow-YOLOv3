@@ -59,13 +59,13 @@ python3 detect.py video 0.5 0.5 data/videos/champs-elysees.mp4
 
 # YOLOv3-Tiny vs. YOLOv3
 <div align="center">
-  <img width="50%" height="50%" src="./detections/YOLOv3Tiny_output.jpg"/>
-  <img width="50%" height="50%" src="./detections/YOLOv3_output.jpg"/>
+  <img width="40%" height="40%" src="./detections/YOLOv3Tiny_output.jpg"/>
+  <img width="40%" height="40%" src="./detections/YOLOv3_output.jpg"/>
 </div>
 
 <div align="center">
-  <img width="50%" height="50%" src="./detections/YOLOv3Tiny_output.gif"/>
-  <img width="50%" height="50%" src="./detections/YOLOv3_output.gif"/>
+  <img width="40%" height="40%" src="./detections/YOLOv3Tiny_output.gif"/>
+  <img width="40%" height="40%" src="./detections/YOLOv3_output.gif"/>
 </div>
 
 Bugs
