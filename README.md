@@ -38,6 +38,8 @@ Usage
 * `confidence`: Confidence threshold between [0.0, 1.0].
 * `path`: Path to file we want to do detection on.
 
+`python3 detect.py [-h] [--tiny] webcam iou confidence`
+
 
 Example
 -------
