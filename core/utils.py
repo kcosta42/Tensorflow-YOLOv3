@@ -41,15 +41,19 @@ def draw_boxes(img_name, boxes_dict, class_names, input_size):
           xy[2], xy[3] = xy[2] - t, xy[3] - t
           draw.rectangle(xy, outline="blue")
 
-        text = f"{class_names[cls]} {(confidence * 100):.1f}%"
+        text = "{} {:.1f}%".format(class_names[cls], confidence * 100)
         text_size = draw.textsize(text, font=font)
-        draw.rectangle([x0, y0 - text_size[1], x0 + text_size[0], y0], fill="blue")
-        draw.text((x0, y0 - text_size[1]), text, fill="black", font=font)
+        if y0 - text_size[1] >= 0:
+            draw.rectangle([x0, y0 - text_size[1], x0 + text_size[0], y0], fill="blue")
+            draw.text((x0, y0 - text_size[1]), text, fill="white", font=font)
+        else:
+            draw.rectangle([x0, y0,  x0 + text_size[0], y0 + text_size[1]], fill="blue")
+            draw.text((x0, y0), text, fill="white", font=font)
 
         print(text)
 
   rgb_img = img.convert('RGB')
-  rgb_img.save('./detections/image_output.jpg')
+  rgb_img.save('./detections/image_output.png')
   print("Image Saved at \"" + './detections/image_output.jpg' + "\"")
   rgb_img.show()
 
