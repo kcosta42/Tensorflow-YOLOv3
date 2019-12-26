@@ -77,4 +77,4 @@ def draw_boxes_frame(frame, frame_size, boxes_dicts, class_names, input_size):
                       (xy[0] + test_width, xy[1] - text_height - baseline),
                       color[::-1],
                       thickness=cv2.FILLED)
-        cv2.putText(frame, class_names[cls], (xy[0], xy[1] - baseline), cv2.FONT_HERSHEY_SIMPLEX, 0.75, (0, 0, 0), 1)
+        cv2.putText(frame, class_names[cls], (xy[0], xy[1] - baseline), cv2.FONT_HERSHEY_SIMPLEX, 0.75, (255, 255, 255), 1)
