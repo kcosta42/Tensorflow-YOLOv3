@@ -76,7 +76,7 @@ if __name__ == "__main__":
   parser.add_argument("mode", choices=["video", "image", "webcam"], help="detection mode")
   parser.add_argument("iou", metavar="iou", type=float, help="IoU threshold [0.0, 1.0]")
   parser.add_argument("confidence", metavar="confidence", type=float, help="confidence threshold [0.0, 1.0]")
-  if 'video ' in sys.argv or 'image' in sys.argv:
+  if 'video' in sys.argv or 'image' in sys.argv:
     parser.add_argument("path", type=str, help="path to file")
 
   args = parser.parse_args()
