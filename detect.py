@@ -42,6 +42,7 @@ def main(mode, tiny, iou_threshold, confidence_threshold, path):
       if not retval:
         break
       resized_frame = cv2.resize(frame, dsize=tuple((x) for x in model.input_size[::-1]), interpolation=cv2.INTER_NEAREST)
+      resized_frame = cv2.cvtColor(resized_frame, cv2.COLOR_BGR2RGB)
       result = sess.run(detections, feed_dict={inputs: [resized_frame]})
       draw_boxes_frame(frame, frame_size, result, class_names, model.input_size)
       cv2.imshow("Detections", frame)
